@@ -1,0 +1,147 @@
+.skdslider{
+	 width:100%;
+	 position: relative;
+	 display: block;
+	 overflow:hidden;
+	height: 700px;
+}
+
+
+.skdslider ul.slides{ margin:0; padding:0; list-style-type:none;}
+.skdslider ul.slides li{
+	position: relative;
+   display: none;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+.skdslider ul.slides li:after {
+    content: '';
+     
+    display: block;
+	position: absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.7);
+}
+.skdslider ul.slide-navs {
+    top: calc(50% + 30px);
+    right: 2%;
+    position: absolute;
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	z-index: 99;
+}
+
+.skdslider .slide-desc {
+    padding: 0 15px 0 15px;
+	position: relative;
+	display:inline-block;
+	z-index: 999;
+}
+.skdslider .slide-desc > h2 {
+    color: #CFDB0C;
+    font-family: 'lato';
+	font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+.skdslider .slide-desc > p {
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 5px;
+	font-family: 'lato';
+	font-weight: 400;
+}
+.skdslider .slide-desc > p a.more {
+    color:#990000;
+	font-size:20px;
+	text-decoration:none;
+}
+.skdslider .slide-desc > p a.more:hover {
+text-decoration:underline;
+}
+
+.skdslider a.prev{
+    background: url("../images/image/left.png") no-repeat scroll 0 0 transparent;
+	width:35px;
+	height:35px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:2%;
+	margin-top:-17px;
+	z-index: 999;
+}
+
+.skdslider a.next{
+    background: url("../images/image/right.png") no-repeat scroll 0 0 transparent;
+	width:35px;
+	height:35px;
+	display:block;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	right:2%;
+	margin-top:-17px;
+	z-index: 999;
+}
+.skdslider a.prev:hover{
+  
+}
+.skdslider a.next:hover{
+  
+}
+
+.skdslider a.play{
+    background: url("../images/image/play.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+	z-index: 999;
+}
+
+.skdslider a.pause{
+    background: url("../images/image/pause.png") no-repeat scroll center center transparent;
+	width:35px;
+	height:35px;
+	display:none;
+	cursor:pointer;
+	position:absolute;
+	top:50%;
+	left:48%;
+	margin-top:-17px;
+	z-index: 999;
+}
+/*Some Responsive CSS */
+@media screen and (max-width:767px) {
+	.skdslider .slide-desc > h2 {
+		font-size: 20px;
+		margin-bottom: 5px;
+		margin-top: 5px;
+	}
+	
+	.skdslider .slide-desc > p {
+		font-size: 14px;
+		line-height: 15px;
+		margin-top: 5px;
+	}
+	.skdslider .slide-desc > p a.more {
+		font-size:14px;
+	}
+}
